@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+# docker-api appears to be unmaintained, and has a noisy deprecation
+# warning under ruby 2.7. Use a local fork.
+gem "docker-api", git: "https://github.com/chef/docker-api.git"
+
 group :development do
   gem "chefstyle"
   gem "rake"
